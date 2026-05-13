@@ -37,9 +37,5 @@ public class Vitek extends vitek.object.Serega {
         System.out.println(joint.tobacco);
         System.out.println(marijuanaSum);
         setFireTo();
-
-
     }
-
-
 }
