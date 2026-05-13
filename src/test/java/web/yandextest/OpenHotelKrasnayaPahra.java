@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class OpenHotelKrasnayaPahra {
     @Test
-    public void openUrlHoyelKrasnayaPahra() {
+    public void openUrlHotelKrasnayaPahra() {
         open("https://krasnaya-pakhra-kurort.ru/");
         Selenide.switchTo().frame("booking-search-frame");
         $(".rec-dates-btn").scrollIntoCenter().click();
