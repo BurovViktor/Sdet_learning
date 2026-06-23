@@ -1,0 +1,9 @@
+/build/reports/*
+/.idea/.gitignore
+/target/*
+/.idea/checkstyle-idea.xml
+/.idea/compiler.xml
+/.idea/jarRepositories.xml
+/.idea/misc.xml
+/.idea/Sdet_learning.iml
+/.idea/vcs.xml
