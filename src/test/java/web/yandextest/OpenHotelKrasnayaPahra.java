@@ -1,20 +1,44 @@
 package web.yandextest;
 
-import com.codeborne.selenide.Selenide;
+import krasnayaPahra.ui.pageObjects.fiow.MainPageFlow;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static com.codeborne.selenide.Selenide.*;
 
 
 public class OpenHotelKrasnayaPahra {
-    @Test
-    public void openUrlHotelKrasnayaPahra() {
-        open("https://krasnaya-pakhra-kurort.ru/");
-        Selenide.switchTo().frame("booking-search-frame");
-        $(".rec-dates-btn").scrollIntoCenter().click();
-       // $$("#ares li.g").shouldHave(CollectionCondition.size(10));
-       // $("#ares li.g").shouldHave(text("Яндекс Карты — транспорт, навигация, поиск мест"));
-        System.out.println("");
+
+    private MainPageFlow mainPageFlow;
+
+    @BeforeEach
+    void setUp(){
+        mainPageFlow = new MainPageFlow();
+
+        mainPageFlow.openMainPageInBrowser();
+        mainPageFlow.mainPageIsLoaded();
     }
 
+    @Test
+    public void openUrlHotelKrasnayaPahra() {
+        mainPageFlow
+                .atNavigationFlow()
+                .hoverOnPrices();
+        mainPageFlow.atNavigationFlow().waitSec(3);
+
+        mainPageFlow.atNavigationFlow().hoverOnRestaurants();
+        mainPageFlow.atNavigationFlow().waitSec(1);
+
+        mainPageFlow.atNavigationFlow().clickOnPrices();
+
+        mainPageFlow.switchToBookingIframe();
+    }
+    @Test
+    void hoverOnNavigationPanel(){
+        mainPageFlow.atNavigationFlow()
+                .hoverOnPrices();
+        mainPageFlow.atNavigationFlow().waitSec(3);
+
+        mainPageFlow.atNavigationFlow().
+                hoverOnRestaurants();
+        mainPageFlow.atNavigationFlow().waitSec(3);
+    }
 }
