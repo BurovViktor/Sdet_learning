@@ -14,7 +14,7 @@ public class NavigationHeaderPanel extends BasePage {
     private static final String RECOVERY_ELEMENT = ".//a[@id='sub-ozdorovlenie']";
     private static final String CHILDS_ELEMENT = ".//a[@id='sub-detyam']";
     private static final String SERVICES_ELEMENT = "//a[@id='sub-uslugi']";
-    private static final String NUMBER_ELEMENT = ".//a[@id='sub-nomera']";
+    private static final String ROOMS_ELEMENT = ".//a[@id='sub-nomera']";
     private static final String HOW_TO_GET_THERE_ELEMENT = ".//a[@title='Как проехать в отель']";
 
     @Override
@@ -42,11 +42,11 @@ public class NavigationHeaderPanel extends BasePage {
         return getMainElement().$x(SERVICES_ELEMENT);
     }
 
-    public SelenideElement getNumberElement(){
-        return getMainElement().$x(NUMBER_ELEMENT);
+    public SelenideElement getRoomsElement() {
+        return getMainElement().$x(ROOMS_ELEMENT);
     }
 
-    public SelenideElement getHowToGetThereElemnt(){
+    public SelenideElement getHowToGetThereElemnt() {
         return getMainElement().$x(HOW_TO_GET_THERE_ELEMENT);
     }
 }
