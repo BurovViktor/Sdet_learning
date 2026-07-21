@@ -1,7 +1,8 @@
 package krasnayaPahra.ui.pageObjects.enums;
 
 public enum EnamsPahra {
-    BASE_URL("https://krasnaya-pakhra-kurort.ru");
+    BASE_URL("https://krasnaya-pakhra-kurort.ru"),
+    BUSINESS_URL("https://krasnaya-pakhra-kurort.ru/nomera/nomera-biznes/biznes");
 
     private String title;
 
