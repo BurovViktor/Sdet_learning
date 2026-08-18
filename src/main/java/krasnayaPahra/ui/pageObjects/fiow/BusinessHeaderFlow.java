@@ -31,6 +31,7 @@ public class BusinessHeaderFlow implements BaseFlow {
     public void scroll() {
         $(BusinessPage.getIframeElement()).scrollIntoView(true);
     }
+    public void hvhg(){}
 
     public static void main(String[] args) {
         List<String> words = Arrays.asList("привет", "гаф", "шалом");
@@ -42,4 +43,7 @@ public class BusinessHeaderFlow implements BaseFlow {
 firstNumber.ifPresent(System.out::println);
 
     }
+
+
+
 }
